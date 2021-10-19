@@ -1,20 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Calculator
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-item>
+    <ion-label class="value">
+      {{value}}
+    </ion-label>
+  </ion-item>
+  <div *ngFor="let numGroup of numberGroups"><!--for (int i=0;i<numberofgroups(3); i++)-->
+    <ion-button color="dark" *ngFor="let num of numGroup" (click)="onButtonPress(num)" class="calc-button">{{num}}</ion-button><!--for(int j=0;j<i;j++)-->
   </div>
 </ion-content>
