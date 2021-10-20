@@ -1,18 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Calculator
+    <ion-title class="center">
+      Calculator App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item>
-    <ion-label class="value">
-      {{value}}
-    </ion-label>
-  </ion-item>
-  <div *ngFor="let numGroup of numberGroups"><!--for (int i=0;i<numberofgroups(3); i++)-->
-    <ion-button color="dark" *ngFor="let num of numGroup" (click)="onButtonPress(num)" class="calc-button">{{num}}</ion-button><!--for(int j=0;j<i;j++)-->
-  </div>
+
+  <ion-slide>
+    <img src="assets/Android-Calculator.png"/>
+    <h2>Your friendly pocket Calculator!</h2>
+    <p>The <b>ionic calculator app</b> contains operations like addition, subtraction, multiplication and division.</p>
+    <ion-button fill="clear" (click)="navigate()" >Use App Now <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+  </ion-slide>
 </ion-content>
+  

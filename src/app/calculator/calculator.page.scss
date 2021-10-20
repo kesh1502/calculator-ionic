@@ -1,0 +1,38 @@
+.value {
+    text-align: right;
+    font-size: 64px;
+    font-family:"Times New Roman", Georgia, serif;;
+    background-color: rgba(102, 188, 209, 0.473);
+    height: 150px;
+  }
+
+.operation {
+    text-align: left;
+    font-size: 22px;
+    font-family: Times New Roman, 'Georgia', serif;
+    background-color: rgba(101, 109, 110, 0.473);
+    height: 32px;
+  }
+  
+.calc-button {
+    
+    width: calc(24% - 4px);
+    height: 64px;
+    font-size: 32px;
+  }
+
+.calc-button:hover{
+    color: gray;
+
+}
+
+.center {
+    text-align: center;
+}
+
+.content{
+
+    
+    height: 100%;
+    
+}
