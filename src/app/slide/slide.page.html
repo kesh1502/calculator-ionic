@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="center">
+      Calculator App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-slide>
+    <img src="assets/calculator-home.png"/>
+    <h2>Your friendly pocket Calculator!</h2>
+    <p>The <b>ionic calculator app</b> contains operations like addition, subtraction, multiplication and division.</p>
+    <ion-button fill="clear" (click)="navigate()" >Use App Now <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+  </ion-slide>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title class="center" style="font-size: smaller;">K-S © 2021</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
+  

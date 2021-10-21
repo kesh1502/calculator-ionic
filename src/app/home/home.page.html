@@ -1,18 +1,44 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title class="center">
-      Calculator App
+      Main Menu
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content >
+  
+  <ion-grid class="center">
+    
+    <ion-row>
+      <ion-col class="option1" (click)="calculator()">
+        <img  src="assets/Android-calculator.png" />
+        <p>Pocket Calculator<p>
+      </ion-col>
+      <ion-col class="option2" (click)="BMI()">
+        <img class="center" src="assets/BMI.png" />
+        <p>BMI Calculator</p>
+      </ion-col>
+    </ion-row>
+    <br><br>
+    <ion-row>
+      <ion-col class="option3" (click)="converter()">
+        <img class="center" src="assets/running-icon.png" />
+        <p>Running Calory Calculator</p>
+      </ion-col>
+      <ion-col class="option4" (click)="about()">
+        <img class="img-about" src="assets/about.png" />
+        <p>About</p>
+      </ion-col>
+    </ion-row>
 
-  <ion-slide>
-    <img src="assets/Android-Calculator.png"/>
-    <h2>Your friendly pocket Calculator!</h2>
-    <p>The <b>ionic calculator app</b> contains operations like addition, subtraction, multiplication and division.</p>
-    <ion-button fill="clear" (click)="navigate()" >Use App Now <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
-  </ion-slide>
+  </ion-grid>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title class="center" style="font-size: smaller;">K-S © 2021</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+
 </ion-content>
   

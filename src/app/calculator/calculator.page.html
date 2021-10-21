@@ -1,26 +1,30 @@
 <ion-header [translucent]="true">
+ 
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
     <ion-title class="center">
-      Calculator App
+    Calculator
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="content" [fullscreen]="true">
+<ion-content class="content"  [fullscreen]="true">
   
-  <ion-item>
+  <ion-item style="background-color: #849aa5;">
     <ion-label class="value">
       {{value}}
     </ion-label>
   </ion-item>
 
-  <ion-item>
+  <ion-item style="background-color: #849aa5;">
     <ion-label class="operation">
     Operations: {{operation}}
     </ion-label>
   </ion-item>
 
-  <div  *ngFor="let numGroup of numberGroups"><!--for (int i=0;i<numberofgroups(3); i++)-->
+  <div style="background-color: #849aa5;" *ngFor="let numGroup of numberGroups"><!--for (int i=0;i<numberofgroups(3); i++)-->
     <ion-button color="dark" *ngFor="let num of numGroup" (click)="onButtonPress(num)" class="calc-button">{{num}}</ion-button><!--for(int j=0;j<i;j++)-->
   </div>
 
