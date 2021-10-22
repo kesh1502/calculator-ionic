@@ -46,4 +46,9 @@ export class BmiPage implements OnInit {
       this.bmiMessage = "Obese"
     }
   }
+
+  Reset(){
+    window.location.reload();
+  }
+
 }

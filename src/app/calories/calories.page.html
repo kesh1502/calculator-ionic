@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="center">Running Calories Calculator</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+
+  <div class="initial" *ngIf="!calories">
+  <ion-item style="background-color: #71c4ee; text-align: center;">
+    <ion-list>
+      <img src="assets/running.png"/>
+      <ion-list-header class="center">
+        <ion-label>Name:</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-input class="input-wrapper,center" type="string" placeholder="Enter the Person Name:" [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-radio-group  [(ngModel)]="gender">
+        <ion-list-header  class="center">
+          <ion-label>Gender:</ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Male</ion-label>
+          <ion-radio slot="start" color="primary" value="M"></ion-radio>
+        </ion-item>
+          <ion-item>
+          <ion-label>Female</ion-label>
+          <ion-radio slot="start" color="danger" value="F"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+       <ion-list-header class="center">
+          <ion-label>Minutes:</ion-label>
+       </ion-list-header>
+      <ion-item style="background-color: #849aa5;">
+        <ion-item>
+          <ion-input class="input-wrapper,center" type="string" placeholder="Enter the minutes:" [(ngModel)]="minutes"></ion-input>
+        </ion-item>
+      </ion-item>
+    </ion-list>
+  </ion-item>
+
+  <div padding class="center">
+    <ion-button color="dark" ion-button (click)="calculateCalories()">Calculate</ion-button>
+  </div>
+
+  </div>
+
+  <hr>
+
+  <div class="final" *ngIf="calories">
+  <ion-card class="center" *ngIf="calories">
+    <ion-card-header>
+      Calories Lost Results
+    </ion-card-header>
+   
+    <ion-card-content>
+      <h1>Person: {{ this.name }}</h1>
+      <p>Gender: {{this.gender}}</p>
+      <p>Minutes: {{this.minutes}}min</p>
+      <p><strong>Calories Burnt: <br>{{this.message}}</strong></p>
+    </ion-card-content>
+  </ion-card>
+  <div padding class="center">
+    <ion-button color="dark" ion-button (click)="Reset()">Reset</ion-button>
+  </div>
+</div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="center" style="font-size: smaller;">K-S © 2021</ion-title>
+  </ion-toolbar>
+</ion-footer>
+

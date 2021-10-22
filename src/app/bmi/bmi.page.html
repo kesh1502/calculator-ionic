@@ -3,13 +3,15 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title class="center">BMI Calculator</ion-title>
+    <ion-title >BMI Calculator</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 <!-- type the following content inside <ion-content> tag -->
-  <img src="assets/BMI.png"/>
+
+  <div class="initial" *ngIf="!bmiValue">
+  <img src="assets/bmi2.png"/>
   <ion-list>
     <ion-item>
       <ion-input class="input-wrapper" type="string" placeholder="Enter the Person Name:" [(ngModel)]="name"></ion-input>
@@ -26,26 +28,29 @@
   <div padding class="center">
     <ion-button color="dark" ion-button (click)="calculateBMI()">Calculate</ion-button>
   </div>
+  </div>
   
+  <div class="final" *ngIf="bmiValue">
   <hr>
-  <ion-card class="center" *ngIf="bmiValue">
+  <ion-card class="center">
     <ion-card-header>
       BMI Calculation Results
     </ion-card-header>
-   
     <ion-card-content>
       <h1>Person: {{ this.name }}</h1>
       <p>Weight: {{this.weight}} kg; Height: {{this.height}} cm</p>
       <p>BMI: {{bmiValue}}</p>
       <p><strong>You are {{bmiMessage}}</strong></p>
     </ion-card-content>
-
   </ion-card>
-
-  <ion-footer>
-    <ion-toolbar>
-      <ion-title class="center" style="font-size: smaller;">K-S © 2021</ion-title>
-    </ion-toolbar>
-  </ion-footer>
-
+  <div padding class="center">
+    <ion-button color="dark" ion-button (click)="Reset()">Reset</ion-button>
+  </div>
+</div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="center" style="font-size: smaller;">K-S © 2021</ion-title>
+  </ion-toolbar>
+</ion-footer>

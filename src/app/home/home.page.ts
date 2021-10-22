@@ -18,11 +18,11 @@ export class HomePage {
   this.router.navigate(['/bmi']);
  }
 
- converter(){
-  this.router.navigate(['/calculator']);
+ calories(){
+  this.router.navigate(['/calories']);
  }
 
  about(){
-  this.router.navigate(['/calculator']);
+  this.router.navigate(['/about']);
  }
 }

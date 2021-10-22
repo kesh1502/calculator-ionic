@@ -23,6 +23,14 @@ const routes: Routes = [
     path: 'slide',
     loadChildren: () => import('./slide/slide.module').then( m => m.SlidePageModule)
   },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'calories',
+    loadChildren: () => import('./calories/calories.module').then( m => m.CaloriesPageModule)
+  },
 ];
 
 @NgModule({
